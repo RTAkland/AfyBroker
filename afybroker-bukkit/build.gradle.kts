@@ -2,6 +2,12 @@ plugins {
     id("com.github.johnrengelman.shadow")
 }
 
+repositories {
+    maven("https://repo.tabooproject.org/repository/releases/") {
+        isAllowInsecureProtocol = true
+    }
+}
+
 dependencies {
     compileOnly("ink.ptms.core:v12004:12004:mapped")
     compileOnly("org.jetbrains:annotations:20.1.0")
